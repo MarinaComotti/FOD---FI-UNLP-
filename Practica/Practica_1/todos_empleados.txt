@@ -1,0 +1,5 @@
+Apellido: Ramirez Nombre: Laura Nro: 1 Edad: 30 Dni: 123
+Apellido: Gomez Nombre: Diego Nro: 3 Edad: 45 Dni: 0
+Apellido: Ortega Nombre: Manuel Nro: 5 Edad: 31 Dni: 0
+Apellido: Diaz Nombre: Florencia Nro: 7 Edad: 35 Dni: 537
+Apellido: Lopez Nombre: Camila Nro: 9 Edad: 25 Dni: 0
