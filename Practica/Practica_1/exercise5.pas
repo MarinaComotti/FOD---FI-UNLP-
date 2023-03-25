@@ -25,7 +25,6 @@ begin
   rewrite(celulares);
 
   while not eof(arch_text) do begin
-    writeln('Entro al whileee');
     with cel do begin
       readln(arch_text, codigo, precio, marca);  //CONSULTAR POR ESTO !!!! Porque pasa????
       readln(arch_text, stockDisp, stockMin, descripcion);

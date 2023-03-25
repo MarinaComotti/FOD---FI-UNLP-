@@ -1,0 +1,6 @@
+2 700  Samsung
+0 10  GamaAlta
+G9
+3 800  LG
+0 20  GamaPremium
+Galaxi
