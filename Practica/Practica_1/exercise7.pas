@@ -207,7 +207,7 @@ begin
     'Crear': crearArchivoBinario(novelas, novelasTexto);
     'Agregar': agregarUnaNovela(novelas);
     'Modificar': modificarNovela(novelas);
-    'Imprimir': imprimirNovelas(novelas);   //Esto lo puse para probar!!
+    'Imprimir': imprimirNovelas(novelas);   //Esto lo pude para probar!!
   end;
   
   //NO ES NECESARIO EL CLOSE ACA NO???
