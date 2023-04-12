@@ -98,8 +98,9 @@ var
   prod: productoMae;
 begin
   reset(maestro);
+  rewrite(texto);
   leerMaestro(maestro, prod);
-  while not eof(maestro) do begin
+  while (prod.codigo <> valorAlto) do begin
     writeln(texto, 'Nombre del producto: ', prod.nombre);
     writeln(texto, '- descripcion: ', prod.descripcion);
     writeln(texto, ' - stock disponible: ', prod.stockDisponible, ' - precio: ', prod.precio);

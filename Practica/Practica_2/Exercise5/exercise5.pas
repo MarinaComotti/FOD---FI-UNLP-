@@ -57,80 +57,6 @@ type
   vectorFallecimientos = array[1..dimF] of regFallecimiento;
 
 
-
-// ---------SOLO PARA PROBAR ------------------
-procedure leerNacim(var regNac: regNacimiento);
-begin
-  write('Ingrese nro de partida : ------------> ');
-  readln(regNac.nroPartida);
-end;
-
-procedure crearArchNacim(var archNacim: archivoNacimiento);
-var 
-   regNac: regNacimiento;
-begin
-  writeln('Ingrese los numeros de partidas de los NACIMIENTOS hasta ingresar 0: ');
-  leerNacim(regNac);
-  while(regNac.nroPartida <> 0) do begin
-    write(archNacim, regNac);
-    leerNacim(regNac);
-  end;
-  
-  //close(archNacim);
-  
-end;
-
-
-procedure crearNacimientos(var vectArchNacim: vectorArchNacim);
-var
-  i: integer;
-begin
-  for i:=0 to dimF do begin
-    rewrite(vectArchNacim[i]);
-    crearArchNacim(vectArchNacim[i]);
-    close(vectArchNacim[i]);
-    writeln('DSOIFNIEDNFI');               // EL ERROR ESTA ACÁ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  end;
-  writeln('SALIIII');
-end;
-
-procedure leerFallec(var regNac: regFallecimiento);
-begin
-  write('Ingrese nro de partida : ------------> ');
-  readln(regNac.nroPartida);
-end;
-
-procedure crearArchFallec(var archNacim: archivoFallecimiento);
-var 
-   regNac: regFallecimiento;
-begin
-  writeln('Ingrese los numeros de partidas de los FALLECIMIENTOS hasta ingresar 0: ');
-  leerFallec(regNac);
-  while(regNac.nroPartida <> 0) do begin
-    write(archNacim, regNac);
-    leerFallec(regNac);
-  end;
- // close(archNacim);
-  
-end;
-
-
-procedure crearFallecimientos(var vectArchNacim: vectorArchFallec);
-var
-  i: integer;
-begin
-
-  for i:=0 to dimF do begin
-    rewrite(vectArchNacim[i]);
-    crearArchFallec(vectArchNacim[i]);
-    close(vectArchNacim[i]);
-  end;
-end;
-
-
-
-// ------------------------------------------------------------------------------------------------
-
 procedure leerNacimientos (var archNacim: archivoNacimiento; var regNacim: regNacimiento);
 begin
   if not eof(archNacim) then
@@ -277,20 +203,11 @@ var
   str: cadena;
 begin
   assign(maestro, 'masterFileEx5.dat');
-//assign Nacim
-  assign(vectArchNacim[0], 'birthFile1.dat');
-  assign(vectArchNacim[1], 'birthFile2.dat');
-  assign(vectArchNacim[2], 'birthFile3.dat');
-//assign Fallec
-  assign(vectArchFallec[0], 'deathFile1.dat');
-  assign(vectArchFallec[1], 'deathFile2.dat');
-  assign(vectArchFallec[2], 'deathFile3.dat');
-  
-  crearNacimientos(vectArchNacim);
-  writeln(' ');
-  writeln('ENTROOOOO');
-  crearFallecimientos(vectArchFallec);
-  writeln(' ');
+
+   // FALTA EL ASSING DE LOS OTROS ARCHIVOS. Tambien falta el assign del de texto-------------------------
+
+
+
   crearArchMaestro(maestro, vectArchNacim, vectArchFallec);
   crearArchTexto(maestro, archTexto);
 end.
